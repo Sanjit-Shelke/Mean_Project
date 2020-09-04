@@ -1,4 +1,4 @@
-<body style="background-image: url(https://www.completehealthnews.com/wp-content/uploads/2019/09/meat-tomatoes-salat-fastfud-fast-food-sendvich-hamburger-pom.jpg);
+<body style="background-image: url(https://img.freepik.com/free-photo/homemade-hamburger-close-up-with-beef-tomato-lettuce-cheese-onion-wooden-table_96727-1158.jpg?size=626&ext=jpg);
              background-repeat: no-repeat;
              background-size: cover ;height: 100vh;">
 
@@ -6,7 +6,7 @@
 
         <div class="row" style="height: 60px;
         background-color:  rgba(85, 82, 97, 0.548);
-        box-shadow: 1px 1px 15px 1px rgba(53, 45, 160, 0.918);
+        box-shadow: 1px 1px 15px 1px rgba(139, 221, 101, 0.918);
         ">
             <div id="glow" class="col-7 " style="font-family: 'Rock Salt', cursive;
                     font-size: 2.3em;
@@ -16,33 +16,37 @@
             </div>
 
             <div class="col-5 d-flex justify-content-end align-items-center">
-            
+
                 <div>
-                    <button class="btn btn-light" routerLink="/frontpage"
+                    <button class="btn btn-light mr-4" routerLink="/frontpage"
                     > Home</button>
                 </div>
 
                 <div>
-                    <button class="btn ml-3 btn-warning" routerLink="/signup"
+                    <button class="btn btn-info mr-4" routerLink="/login"
+                    >Sign In</button>
+                </div>
+
+                <div>
+                    <button class="btn btn-warning mr-4" routerLink="/signup"
                     >Sign Up</button>
                 </div>
             </div>
 
         </div>
 
-
         <div class="row" style="height: 90vh;">
 
             <div class="col-8  d-flex justify-content-center align-items-center">
                 <div class="col-5  d-flex flex-column  align-items-center" style="height: 70vh;
                             background-color: rgba(157, 156, 161, 0.24);
-                            box-shadow: 2px 2px 10px 10px rgba(219, 241, 18, 0.589);">
+                            box-shadow: 2px 2px 10px 10px rgba(247, 49, 230, 0.589);">
 
                     <div class="mt-4">
-                        <fa-icon [icon]="faCookieBite" style="font-size: 68px; color: rgb(255, 133, 27);"></fa-icon>
+                        <fa-icon [icon]="faCloudMeatball" style="font-size: 68px; color: rgb(27, 190, 255);"></fa-icon>
                     </div>
-                    <div class="text-light" style="font-family:'Kaushan Script', cursive; font-size: 5vh;">
-                        LogIn!
+                    <div class="text-light mt-3" style="font-family:'Kaushan Script', cursive; font-size: 5vh;">
+                        Update!
                     </div>
 
                     <div class="col-10" [formGroup]="fbFormGroup">
@@ -61,17 +65,11 @@
                                 aria-describedby="addon-wrapping">
                         </div>
 
-                        <div class="col mt-2">
-                         <button class="col btn btn-outline-info p-0" style=" height: px;" routerLink="/forgot"> Forgot username/password</button>
-                        </div>
+                        
 
                         <div class="col d-flex flex-column justify-content-center align-items-center">
                             <div>
-                                <button type="button" class="btn btn-success mt-4" [disabled]="!fbFormGroup.valid" (click)=loginProcessHere()>LogIn</button>
-                            </div>
-                            
-                            <div class="alert alert-danger" role="alert" *ngIf="invalidCred">
-                                Invalid Credentials.
+                                <button type="button" class="btn btn-success mt-4" [disabled]="!fbFormGroup.valid" (click)=changepass()>Update</button>
                             </div>
 
                         </div>
@@ -87,6 +85,7 @@
 
             </div>
         </div>
+       
 
     </div>
 

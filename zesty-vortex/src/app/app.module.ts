@@ -13,6 +13,7 @@ import { FrontpageComponent } from './frontpage/frontpage.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { ForgotComponent } from './forgot/forgot.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { GalleryComponent } from './gallery/gallery.component';
     HomepageComponent,
     FrontpageComponent,
     PageNotFoundComponent,
-    GalleryComponent
+    GalleryComponent,
+    ForgotComponent
   ],
   imports: [
     BrowserModule,

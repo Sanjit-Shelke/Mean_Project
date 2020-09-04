@@ -44,6 +44,24 @@ app.post("/addusers", (req, res) => {
 });
 
 
+app.post("/changepass", async (req, res) => {
+    try {
+        const input = req.body;
+
+        await add.updateuser(input);
+    
+
+        res.json({
+            message: "success"
+        })
+    } catch (err) {
+        res.json({
+            message: "Failure"
+        })
+    }
+});
+
+
 app.listen(3000);
 
 

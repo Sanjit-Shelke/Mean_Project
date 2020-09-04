@@ -6,6 +6,7 @@ import { HomepageComponent } from "./homepage/homepage.component";
 import { FrontpageComponent } from "./frontpage/frontpage.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { GalleryComponent } from './gallery/gallery.component';
+import { ForgotComponent } from './forgot/forgot.component';
 
 
 
@@ -16,7 +17,8 @@ const routes: Routes = [{ path:"frontpage",component:FrontpageComponent},
   },
                         { path: "signup", component: SignupComponent },
                         { path: "login", component: LoginComponent },
-                        { path:"PageNotFoundComponent",component:PageNotFoundComponent},
+                        { path: "PageNotFoundComponent", component: PageNotFoundComponent },
+                        { path:"forgot",component:ForgotComponent},
                         { path: "", redirectTo: "/frontpage", pathMatch: "full" },
                         { path:"**",component:PageNotFoundComponent},
 ];

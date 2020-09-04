@@ -5,7 +5,7 @@ Promise.promisifyAll(require("mysql/lib/Connection").prototype);
 Promise.promisifyAll(require("mysql/lib/Pool").prototype);
 
 
-const datacon = {
+const DB_CONFIG = {
     host: 'localhost',
     user: 'root',
     password: '',
@@ -13,7 +13,7 @@ const datacon = {
 }
 
 let authenticateUser = async (input) => {
-    const connection = mysql.createConnection(datacon);
+    const connection = mysql.createConnection(DB_CONFIG);
     await connection.connectAsync();
 
     let sql = "SELECT * FROM ZESTY WHERE email=? AND password=?";
@@ -31,7 +31,7 @@ let authenticateUser = async (input) => {
 
 let adduser = async (input) => {
 
-    const con = mysql.createConnection(datacon);
+    const con = mysql.createConnection(DB_CONFIG);
     await con.connectAsync();
     let sql = "INSERT INTO ZESTY (username,email,password,contact) VALUES(?,?,?,?)"
     await con.queryAsync(sql, [
@@ -43,8 +43,21 @@ let adduser = async (input) => {
     await con.endAsync();
 };
 
+let updateuser = async (input) => {
 
-module.exports = { authenticateUser, adduser };
+
+    const con = mysql.createConnection(DB_CONFIG);
+    await con.connectAsync();
+
+    let sql = "UPDATE ZESTY SET password=? WHERE email=?"
+    let results = await con.queryAsync(sql, [input.password, input.email]);
+    await con.endAsync();
+
+    return results;
+}
+
+
+module.exports = { authenticateUser, adduser, updateuser };
 
 // const DB_CONFIG = {
 //     host: "localhost",

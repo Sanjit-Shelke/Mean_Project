@@ -2,42 +2,37 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-
+import {faCloudMeatball } from '@fortawesome/free-solid-svg-icons'
 
 @Component({
-  selector: 'app-signup',
-  templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+  selector: 'app-forgot',
+  templateUrl: './forgot.component.html',
+  styleUrls: ['./forgot.component.css']
 })
-export class SignupComponent implements OnInit {
+export class ForgotComponent implements OnInit {
+  public faCloudMeatball = faCloudMeatball;
 
   public fbFormGroup = this.fb.group({
-    username: ['', Validators.required],
     email: ['', Validators.required],
     password: ['', [Validators.required,Validators.minLength(6)]],
-    contact: ['',Validators.required],
   })
 
-
   constructor(
-    private router: Router,
-    private http: HttpClient,
     private fb: FormBuilder,
-
+    private router: Router,
+    private http: HttpClient
   ) { }
 
   ngOnInit(): void {
   }
 
-  async signup() {
+  async changepass() {
     const data = this.fbFormGroup.value;
     console.log(data);
-    const url = "http://localhost:3000/addusers";
+    const url = "http://localhost:3000/changepass";
     const result = await this.http.post(url, data).toPromise();
     console.log(result);
     this.router.navigate(['login']);
     this.fbFormGroup.reset();
   }
-
-
 }

@@ -3,6 +3,7 @@ import { faCookieBite } from '@fortawesome/free-solid-svg-icons';
 import { FormBuilder,Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { faHome} from '@fortawesome/free-solid-svg-icons'
 
 
 @Component({
@@ -11,12 +12,14 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  public fahome = faHome;
   public faCookieBite = faCookieBite;
   public invalidCred = false;
 
+
   public fbFormGroup = this.fb.group({
     email: ['',Validators.required],
-    password: ['',Validators.required],
+    password: ['',[Validators.required,Validators.minLength(6)]],
   });
 
   constructor(
