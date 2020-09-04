@@ -17,11 +17,9 @@
 
             <div class="col-5 d-flex justify-content-end align-items-center">
                 <div>
-                    <button class="btn btn-primary mr-4">Sign In</button>
+                    <button class="btn btn-primary mr-4" routerLink="/login">Sign In</button>
                 </div>
-                <div>
-                    <button class="btn btn-warning">Sign Up</button>
-                </div>
+                
             </div>
 
         </div>
@@ -44,37 +42,37 @@
                         Sign Up!
                     </div>
 
-                    <div class="col-10">
+                    <div class="col-10" [formGroup]="fbFormGroup">
                     <div class="input-group flex-nowrap mt-5">
                         <div class="input-group-prepend">
                           <span class="input-group-text pr-3" id="addon-wrapping">Username</span>
                         </div>
-                        <input type="text" class="form-control " placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+                        <input type="text" formControlName="username" class="form-control " placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
                       </div>
 
                       <div class="input-group flex-nowrap mt-2">
                         <div class="input-group-prepend ">
                           <span class="input-group-text pr-4" id="addon-wrapping">Password</span>
                         </div>
-                        <input type="password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="addon-wrapping">
+                        <input type="password" class="form-control" formControlName="password" placeholder="Password" aria-label="Username" aria-describedby="addon-wrapping">
                       </div>
 
                       <div class="input-group flex-nowrap mt-2">
                         <div class="input-group-prepend ">
                           <span class="input-group-text pr-4" id="addon-wrapping">Email</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="@xyz.com" aria-label="Username" aria-describedby="addon-wrapping">
+                        <input type="text" class="form-control" formControlName="email" placeholder="@xyz.com" aria-label="Username" aria-describedby="addon-wrapping">
                       </div>
 
                       <div class="input-group flex-nowrap mt-2">
                         <div class="input-group-prepend ">
                           <span class="input-group-text pr-2" id="addon-wrapping">Contact</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="+91 70xxxxxx12" aria-label="Username" aria-describedby="addon-wrapping">
+                        <input type="text" class="form-control" formControlName="contact" placeholder="+91 70xxxxxx12" aria-label="Username" aria-describedby="addon-wrapping">
                       </div>
 
                       <div class="col d-flex justify-content-center align-items-center">
-                        <button type="button" class="btn btn-danger mt-4">Register</button>
+                        <button type="button" class="btn btn-danger mt-4" [disabled]="!fbFormGroup.valid" (click)="signup()">Register</button>
                       </div>
 
                     </div>

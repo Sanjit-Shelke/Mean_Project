@@ -12,6 +12,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FrontpageComponent } from './frontpage/frontpage.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     LoginComponent,
     HomepageComponent,
     FrontpageComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,

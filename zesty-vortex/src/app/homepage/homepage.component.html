@@ -6,8 +6,8 @@
                               opacity: 0.9;" >
         <div class="col " >
 
-            <div class="row mt-2" style="height: 70vh;">
-                <div class="col-6  text-light" style="font-family: 'Rock Salt', cursive;
+            <div class="row mt-2 mr-4" style="height: 70vh;">
+                <div class="col-6   text-light" style="font-family: 'Rock Salt', cursive;
                 font-size: 1.5em;
                 font-weight:bold">
                     Zesty Vortex
@@ -20,20 +20,20 @@
                     </div>
 
                     <div class="ml-5">
-                       <button class="btn btn-light" >Popular Dishes</button> 
+                       <button class="btn btn-light" routerLink="gallery">Gallery</button> 
                     </div>
 
                     <div class="ml-5 mr-4">
-                       <button class="btn btn-light">Logout</button> 
+                       <button class="btn btn-light" (click)=logout()>Logout</button> 
                     </div>
                 </div>
             </div>
 
-            <div class="row  align-items-center justify-content-center" 
+            <div class="row mt-3 align-items-center justify-content-center" 
                  style="height:80vh; background-image: url(https://image.freepik.com/free-photo/flat-lay-delicious-food-plain-background-with-copy-space_23-2148305617.jpg);
                         background-repeat: no-repeat; 
                         background-size: cover;">
-                <div class="col d-flex justify-content-center align-items-center">
+                <div class="col d-flex  justify-content-center align-items-center">
                     <div class="col-3 mr-4  d-flex justify-content-center align-items-center " style="height: 65vh; border: solid black;">
                         <img src="https://dqg5fqdy33g0r.cloudfront.net/photos/event-planner/null/spyne/1536769630868/logo_KRJK2149cZ." alt="" 
                              style="position: absolute; width: 100%; height:100%; margin-top: 2opx;">
@@ -62,23 +62,65 @@
 
             </div>
 
-            <div class="row bg-success mt-3" style="height:80vh;">
-                <div class="col">
+            <div class="row   justify-content-center mt-3" style="height:80vh; background-image: url(https://www.icym.edu.my/v13/images/cutlery_e83f5.jpg);
+                                                                    background-repeat: no-repeat;
+                                                                    background-size: cover;">
+                <div class="col d-flex align-items-center justify-content-center " >
+                    <div class="col" style="font-family: 'Satisfy', cursive;font-size: 40px; color: yellow">
+                        At Your Service!
+                        <div>
+                            Select From Our Popular and Most Loved Cuisines!
+                        </div>
+                    </div>
 
+                    <div class="col-3 mr-2 d-flex flex-column justify-content-center align-items-center ">
+                        <div style="font-family: 'Satisfy', cursive;font-size: 32px; color: yellow"> Indian</div>
+                        <div class="btn btn-dark mt-2" style="font-family: cursive; font-size: large;">Chole Bature</div>
+                        <div class="btn btn-dark mt-2" style="font-family: cursive; font-size: large;">Idli Sambar</div>
+                        <div class="btn btn-dark mt-2" style="font-family: cursive; font-size: large;">Thali</div>
+                        <div class="btn btn-dark mt-2" style="font-family: cursive; font-size: large;">Aloo Paratha</div>
+                        <div class="btn btn-dark mt-2" style="font-family: cursive; font-size: large;">Chicken handi</div>
+                        <div class="btn btn-dark mt-2" style="font-family: cursive; font-size: large;">Jira Rice</div>
+                        <div class="btn btn-dark mt-2 mb-2" style="font-family: cursive; font-size: large;">Biryani</div>
+                    </div>
+
+                    <div class="col-3 mr-2 d-flex flex-column justify-content-center align-items-center ">
+                        <div style="font-family: 'Satisfy', cursive;font-size: 32px; color: yellow"> Chinese</div>
+                        <div class="btn btn-dark mt-2" style="font-family: cursive; font-size: large;">Chili chicken</div>
+                        <div class="btn btn-dark mt-2" style="font-family: cursive; font-size: large;">Hakka noodles</div>
+                        <div class="btn btn-dark mt-2" style="font-family: cursive; font-size: large;">Fried Rice</div>
+                        <div class="btn btn-dark mt-2" style="font-family: cursive; font-size: large;">Sezhwan Rice</div>
+                        <div class="btn btn-dark mt-2" style="font-family: cursive; font-size: large;">Chicken Lollipop</div>
+                        <div class="btn btn-dark mt-2" style="font-family: cursive; font-size: large;">Manchow soup</div>
+                        <div class="btn btn-dark mt-2 mb-2" style="font-family: cursive; font-size: large;">Momos</div>
+                    </div>
+
+                    <div class="col-3 mr-2 d-flex flex-column justify-content-center align-items-center">
+                        <div style="font-family: 'Satisfy', cursive;font-size: 32px; color: yellow">Other Special</div>
+                        <div class="btn btn-dark mt-2" style="font-family: cursive; font-size: large;">Pizza</div>
+                        <div class="btn btn-dark mt-2" style="font-family: cursive; font-size: large;">Burger</div>
+                        <div class="btn btn-dark mt-2" style="font-family: cursive; font-size: large;">Sizzlers</div>
+                        <div class="btn btn-dark mt-2" style="font-family: cursive; font-size: large;">Desserts</div>
+                        <div class="btn btn-dark mt-2" style="font-family: cursive; font-size: large;">Pasta</div>
+                        <div class="btn btn-dark mt-2" style="font-family: cursive; font-size: large;">Garlic Breads</div>
+                        <div class="btn btn-dark mt-2 mb-2" style="font-family: cursive; font-size: large;">Beverages</div>
+                    </div>
+                    
+                        
                 </div>
 
             </div>
 
-            <div class="row bg-warning mt-3" style="height:50vh;">
-                <div class="col">
+            <div class="row bg-warning mt-3 align-items-center justify-content-center" style="height:50vh;background-image: url(https://www.thetinybook.com/wp-content/uploads/2020/03/GREECE-GREEK-FOOD.jpg); background-size: cover; background-repeat: no-repeat;">
+                <div class="col-6 bg-light d-flex flex-column justify-content-center align-items-center " style="height: 40vh;border: black solid;">
+                    <div class="mt-5" style="font-family: cursive; font-size: 32px;">Zesty Vortex</div>
+                    <div class="col d-flex justify-content-center ">
+                        <div style="font-size: large;">
+                            zestyvortex@gmail.com || Tel : 022-2829392
+                        </div>
 
-                </div>
-
-            </div>
-
-            <div class="row bg-danger mt-3" style="height:80vh;">
-                <div class="col">
-
+                    </div>
+                    <div class="mb-5" style="font-family: 'Bree Serif', serif; font-size: larger;">Delivering Real Taste!</div>
                 </div>
 
             </div>
@@ -89,4 +131,5 @@
 
         </div>
     </div>
+    
 </div>

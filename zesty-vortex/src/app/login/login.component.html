@@ -1,7 +1,7 @@
 <body style="background-image: url(https://www.completehealthnews.com/wp-content/uploads/2019/09/meat-tomatoes-salat-fastfud-fast-food-sendvich-hamburger-pom.jpg);
              background-repeat: no-repeat;
              background-size: cover ;height: 100vh;">
-    
+
     <div class="container-fluid">
 
         <div class="row" style="height: 60px;
@@ -12,29 +12,27 @@
                     font-size: 2.3em;
                     color:#ff4100;
                     font-weight:bold">
-                    Zesty Vortex
+                Zesty Vortex
             </div>
 
-                <div class="col-5 d-flex justify-content-end align-items-center">
-                    <div>
-                        <button class="btn btn-primary mr-4">Sign In</button>
-                    </div>
-                    <div>
-                        <button class="btn btn-warning">Sign Up</button>
-                    </div>
+            <div class="col-5 d-flex justify-content-end align-items-center">
+            
+                <div>
+                    <button class="btn btn-warning" routerLink="/signup"
+                    >Sign Up</button>
                 </div>
+            </div>
 
         </div>
 
 
         <div class="row" style="height: 90vh;">
-            
+
             <div class="col-8  d-flex justify-content-center align-items-center">
-                <div class="col-5  d-flex flex-column  align-items-center" 
-                     style="height: 70vh;
+                <div class="col-5  d-flex flex-column  align-items-center" style="height: 70vh;
                             background-color: rgba(157, 156, 161, 0.24);
                             box-shadow: 2px 2px 10px 10px rgba(219, 241, 18, 0.589);">
-                    
+
                     <div class="mt-4">
                         <fa-icon [icon]="faCookieBite" style="font-size: 68px; color: rgb(255, 133, 27);"></fa-icon>
                     </div>
@@ -42,23 +40,36 @@
                         LogIn!
                     </div>
 
-                    <div class="col-10">
-                    <div class="input-group flex-nowrap mt-5">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text" id="addon-wrapping">@</span>
+                    <div class="col-10" [formGroup]="fbFormGroup">
+                        <div class="input-group flex-nowrap mt-5">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="addon-wrapping">@</span>
+                            </div>
+                            <input type="text"  class="form-control" formControlName="email" placeholder="email"
+                                aria-label="email" aria-describedby="addon-wrapping">
                         </div>
-                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
-                      </div>
-                      <div class="input-group flex-nowrap mt-2">
-                        <div class="input-group-prepend ">
-                          <span class="input-group-text pr-3" id="addon-wrapping">#</span>
+                        <div class="input-group flex-nowrap mt-2">
+                            <div class="input-group-prepend ">
+                                <span class="input-group-text pr-3" id="addon-wrapping">#</span>
+                            </div>
+                            <input type="password" class="form-control" formControlName="password" placeholder="Password" aria-label="Username"
+                                aria-describedby="addon-wrapping">
                         </div>
-                        <input type="password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="addon-wrapping">
-                      </div>
 
-                      <div class="col d-flex justify-content-center align-items-center">
-                        <button type="button" class="btn btn-success mt-4">LogIn</button>
-                      </div>
+                        <div class="col d-flex flex-column justify-content-center align-items-center">
+                            <div>
+                                <button type="button" class="btn btn-success mt-4" [disabled]="!fbFormGroup.valid" (click)=loginProcessHere()>LogIn</button>
+                            </div>
+                            
+                            <div class="alert alert-danger" role="alert" *ngIf="invalidCred">
+                                Invalid Credentials.
+                            </div>
+
+                        </div>
+
+                        <!-- <div>
+                            {{fbFormGroup.value | json }}
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -70,5 +81,5 @@
 
     </div>
 
-    
+
 </body>
